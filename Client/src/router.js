@@ -8,6 +8,8 @@ import {
 
 import App from './Components/App';
 import Projects from './Components/Projects';
+import Resume from './Components/Resume';
+import AboutMe from './Components/AboutMe';
 
 const Router = () => {
   return (
@@ -15,6 +17,8 @@ const Router = () => {
       <Switch>
         <Route exact path="/" component={App}/>
         <Route exact path='/projects' component={Projects}/>
+        <Route exact path='/resume' component={Resume}/>
+        <Route exact path='/aboutme' component={AboutMe}/>
       </Switch>
     </BrowserRouter>
   )
