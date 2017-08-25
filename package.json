@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./Server/server.js | webpack -w",
+    "start": "nodemon ./Server/server.js",
     "compile": "webpack -d -w",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy": "pm2 deploy ecosystem.config.js production",

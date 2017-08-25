@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const parser = require('body-parser');
 require('dotenv').config();
+const port = 3000;
 
 const app = express();
 
@@ -16,4 +17,4 @@ app.get('*', (req, res) => {
 });
 
 
-app.listen(process.env.PORT, (err) => err ? console.log('Error with connection: ', err) : console.log(`Connection established on port ${process.env.PORT}`));
+app.listen(port, (err) => err ? console.log('Error with connection: ', err) : console.log(`Connection established on port ${port}`));
