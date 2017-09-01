@@ -1,20 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import NavBar from './NavBar';
+import NavBar from "./NavBar";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      
+
     };
+
   }
-  
+
   render() {
+
     return (
       <div>
-        <NavBar/>
+        <NavBar />
       </div>
     );
   }
