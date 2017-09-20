@@ -8,14 +8,14 @@ import Resume from './Resume';
 class NavBar extends Component {
   render() {
     return (
-      <div className='navbar'>
-        <div className='navbar-aboutme'>
+      <div className='navbar-container'>
+        <div className='navbar aboutme'>
           <Link to="/aboutme" className='navbar-text'>About Me</Link>
         </div>
-        <div className='navbar-projects'>
+        <div className='navbar projects'>
           <Link to="/projects" className='navbar-text'>Projects</Link>
         </div>
-        <div className='navbar-resume'>
+        <div className='navbar resume'>
           <Link to="/resume" className='navbar-text'>Resume</Link>
         </div>
       </div>

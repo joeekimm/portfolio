@@ -10,7 +10,6 @@ const app = express();
 // app.use(parser.urlencoded({
 //   extended: true
 // }));
-
 app.use(express.static(path.join(__dirname, '../Client/Static')));
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../Client/Static/index.html'));

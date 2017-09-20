@@ -1,0 +1,4 @@
+@mixin something($bord-color, $bg-color) {
+  border: 1px solid $bord-color;
+  background-color: $bg-color;
+}
