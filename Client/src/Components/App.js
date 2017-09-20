@@ -9,13 +9,20 @@ class App extends Component {
     this.state = {
 
     };
+    this.click = this.click.bind(this);
+  }
 
+  componentDidMount() {
+    this.refs.AppComponent.addEventListener('click', this.click);
+  }
+
+  click() {
+    console.log('clicked');
   }
 
   render() {
-
     return (
-      <div>
+      <div ref='AppComponent'>
         <NavBar />
       </div>
     );
