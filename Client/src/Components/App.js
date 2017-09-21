@@ -9,21 +9,23 @@ class App extends Component {
     this.state = {
 
     };
-    this.click = this.click.bind(this);
   }
 
   componentDidMount() {
-    this.refs.AppComponent.addEventListener('click', this.click);
+
   }
 
-  click() {
-    console.log('clicked');
+  handleScroll () {
+    console.log('scrolling');
   }
 
   render() {
     return (
-      <div ref='AppComponent'>
+      <div style={{backgroundColor: 'blue', height: '100vh'}} onScroll={() => this.handleScroll()}>
         <NavBar />
+        <div>
+          {/* {this.props.children} */}
+        </div>
       </div>
     );
   }
