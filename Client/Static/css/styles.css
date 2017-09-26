@@ -1,44 +1,106 @@
-.app {
-  background-color: pink; }
+body {
+  background-color: #000; }
 
-.navbar-container {
+.nav-scroll {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: horizontal;
-          flex-direction: horizontal;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 10vh;
+  background-color: #fff;
   border: 1px solid #000;
-  border-radius: 0.35rem; }
-  .navbar-container .navbar {
+  border-radius: 0.25rem; }
+  .nav-scroll button {
+    background-color: transparent;
+    border-style: none;
     border-radius: 0.35rem;
     margin: 1vh;
-    padding: 1vh;
-    background-color: black; }
-    .navbar-container .navbar.aboutme {
-      border: 1px solid #000;
-      background-color: #c69; }
-    .navbar-container .navbar.projects {
-      border: 1px solid #000;
-      background-color: #699; }
-    .navbar-container .navbar.resume {
-      border: 1px solid #000;
-      background-color: #a37; }
-  .navbar-container .navbar-text {
-    color: #fff;
+    padding: 1vh; }
+  .nav-scroll .navbar-text {
+    color: #000;
     opacity: 1;
     font-size: 20px; }
 
-a {
-  text-decoration: none; }
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .main.home {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    height: 100vh;
+    color: #fff; }
+  .main.aboutme {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    height: 100vh;
+    color: #fff; }
+  .main.projects {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    height: 100vh;
+    color: #fff; }
+  .main.resume {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    height: 100vh;
+    color: #fff; }
+  .main .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: horizontal;
+            flex-direction: horizontal;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 10vh;
+    background-color: transparent; }
+    .main .navbar-container button {
+      background-color: transparent;
+      border-style: none;
+      border-radius: 0.35rem;
+      margin: 1vh;
+      padding: 1vh; }
+    .main .navbar-container .navbar-text {
+      color: #fff;
+      opacity: 1;
+      font-size: 20px; }

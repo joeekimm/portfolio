@@ -1,46 +1,72 @@
 @import '_variables';
 @import '_partials';
 
-.app {
-  background-color: pink;
+body {
+  background-color: $black;
 }
 
-.navbar-container {
-  display: flex;
-  flex: 1;
-  flex-direction: horizontal;
-  align-items: center;
-  justify-content: center;
-  background-color: red;
-  border: 1px solid $black;
-  border-radius: 0.35rem;
+//============ NAVBAR SCROLL ==================//
 
-  .navbar {
+.nav-scroll {
+  @include flex(row, center, center);
+  transition: background-color .2s ease-in;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 10vh;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 0.25rem;
+  button{
+    background-color: transparent;
+    border-style: none;
     border-radius: 0.35rem;
     margin: 1vh;
     padding: 1vh;
-    background-color: black;
-    
-    &.aboutme {
-      @include something($black, $magpink);
-    }
-
-    &.projects {
-      @include something($black, $turquoise);
-    }
-    
-    &.resume {
-      @include something($black, $magenta);
-    }
   }
-
   .navbar-text {
-    color: $white;
+    color: $black;
     opacity: 1;
     font-size: 20px;
   }
 }
 
-a {
-  text-decoration: none;
+//============ HOME PAGE / NAVBAR =============//
+
+.main {
+  @include flex(column, center, center);
+  &.home {
+    @include sectionFormat(transparent);
+  }
+  &.aboutme {
+    @include sectionFormat(transparent);
+  }
+  &.projects {
+    @include sectionFormat(transparent);
+  }
+  &.resume {
+    @include sectionFormat(transparent);
+  }
+  .navbar-container {
+    @include flex(horizontal, center, center);
+    transition: background-color .2s ease-in;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    height: 10vh;
+    background-color: transparent;
+    button{
+      background-color: transparent;
+      border-style: none;
+      border-radius: 0.35rem;
+      margin: 1vh;
+      padding: 1vh;
+    }
+    .navbar-text {
+      color: $white;
+      opacity: 1;
+      font-size: 20px;
+    }
+  }
 }
+
