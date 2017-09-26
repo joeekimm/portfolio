@@ -11,9 +11,9 @@ const app = express();
 //   extended: true
 // }));
 app.use(express.static(path.join(__dirname, '../Client/Static')));
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../Client/Static/index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../Client/Static/index.html'));
+// });
 
 
 app.listen(port, (err) => err ? console.log('Error with connection: ', err) : console.log(`Connection established on port ${port}`));
