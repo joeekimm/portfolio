@@ -1,4 +1,7 @@
-@mixin sectionFormat($bg-color, $marg: 20px, $pad: 20px) {
+@import '_variables';
+
+@mixin sectionFormat($bg-color, $marg: 0, $pad: 20px) {
+  font-family: $font-theme;
   margin: $marg;
   padding: $pad;
   background-color: $bg-color;
@@ -11,4 +14,16 @@
   flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
+}
+
+@mixin navButton ($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  font-family: $font-theme;
+  font-size: 25px;
+  border-style: none;
+  border-radius: 0.35rem;
+  outline: none;
+  margin: 1vh;
+  padding: 1vh;
 }

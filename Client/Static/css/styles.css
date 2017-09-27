@@ -20,20 +20,31 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 10vh;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 0.25rem; }
-  .nav-scroll button {
+  height: 7vh;
+  background-color: #fff; }
+  .nav-scroll .nav-button {
     background-color: transparent;
+    color: #000;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 25px;
     border-style: none;
     border-radius: 0.35rem;
+    outline: none;
     margin: 1vh;
     padding: 1vh; }
-  .nav-scroll .navbar-text {
-    color: #000;
-    opacity: 1;
-    font-size: 20px; }
+  .nav-scroll .nav-button:hover {
+    background-color: lightgray; }
+  .nav-scroll .nav-button-active {
+    background-color: #000;
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 25px;
+    border-style: none;
+    border-radius: 0.35rem;
+    outline: none;
+    margin: 1vh;
+    padding: 1vh;
+    color: #fff; }
 
 .main {
   display: -webkit-box;
@@ -49,30 +60,120 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .main .titles {
+    margin-bottom: 10vh; }
   .main.home {
-    margin: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 0;
     padding: 20px;
     background-color: transparent;
     height: 100vh;
     color: #fff; }
   .main.aboutme {
-    margin: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 5%;
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff; }
+    color: #fff;
+    text-align: center; }
+    .main.aboutme .portfolio-picture {
+      height: 300px;
+      width: 270px;
+      border-radius: 200px; }
   .main.projects {
-    margin: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 5%;
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff; }
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 35px; }
+    .main.projects .projects-group {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .main.projects .project {
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      margin: 10vh;
+      padding: 5vh;
+      background-color: transparent;
+      height: 100vh;
+      color: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
   .main.resume {
-    margin: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    margin: 5%;
     padding: 20px;
     background-color: transparent;
     height: 100vh;
     color: #fff; }
+  .main .up-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 7vh;
+    margin: 1vh;
+    padding: 1vh; }
+  .main .up-top-button {
+    background-color: transparent;
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 25px;
+    border-style: none;
+    border-radius: 0.35rem;
+    outline: none;
+    margin: 1vh;
+    padding: 1vh;
+    border: 1px solid white; }
+  .main .up-top-button:hover {
+    background-color: darkgray; }
   .main .navbar-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -92,15 +193,28 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
-    height: 10vh;
+    height: 7vh;
     background-color: transparent; }
-    .main .navbar-container button {
+    .main .navbar-container .nav-button {
       background-color: transparent;
+      color: #fff;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      font-size: 25px;
       border-style: none;
       border-radius: 0.35rem;
+      outline: none;
       margin: 1vh;
       padding: 1vh; }
-    .main .navbar-container .navbar-text {
-      color: #fff;
-      opacity: 1;
-      font-size: 20px; }
+    .main .navbar-container .nav-button:hover {
+      background-color: darkgray; }
+    .main .navbar-container .nav-button-active {
+      background-color: #fff;
+      color: #000;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      font-size: 25px;
+      border-style: none;
+      border-radius: 0.35rem;
+      outline: none;
+      margin: 1vh;
+      padding: 1vh;
+      color: #000; }

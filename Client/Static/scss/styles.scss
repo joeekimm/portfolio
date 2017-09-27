@@ -16,21 +16,17 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 10vh;
+  height: 7vh;
   background-color: $white;
-  border: 1px solid $black;
-  border-radius: 0.25rem;
-  button{
-    background-color: transparent;
-    border-style: none;
-    border-radius: 0.35rem;
-    margin: 1vh;
-    padding: 1vh;
+  .nav-button {
+    @include navButton(transparent, $black);
   }
-  .navbar-text {
-    color: $black;
-    opacity: 1;
-    font-size: 20px;
+  .nav-button:hover {
+    background-color: lightgray;
+  }
+  .nav-button-active {
+    @include navButton($black, $white);
+    color: $white;
   }
 }
 
@@ -38,17 +34,52 @@ body {
 
 .main {
   @include flex(column, center, center);
+  .titles {
+    margin-bottom: 10vh;
+  }
   &.home {
     @include sectionFormat(transparent);
   }
   &.aboutme {
-    @include sectionFormat(transparent);
+    @include sectionFormat(transparent, 5%);
+    text-align: center;
+    .portfolio-picture {
+      height: 300px;
+      width: 270px;
+      border-radius: 200px;
+    }
   }
   &.projects {
-    @include sectionFormat(transparent);
+    @include sectionFormat(transparent, 5%);
+    @include flex(column, center, center);
+    font-size: 35px;
+
+    .projects-group {
+      @include flex(row, space-around, center);
+    }
+    .project {
+      @include sectionFormat(transparent, 10vh, 5vh);
+      @include flex(column, start, center);
+    }
   }
   &.resume {
-    @include sectionFormat(transparent);
+    @include sectionFormat(transparent, 5%);
+  }
+  .up-top {
+    @include flex(row, start, center);
+    width: 100vw;
+    position: fixed;
+    top: 7vh;
+    margin: 1vh;
+    padding: 1vh;
+  }
+  .up-top-button {
+    @include navButton(transparent, $white);
+    border: 1px solid white;
+  }
+  .up-top-button:hover {
+    // transition: background-color .1s ease-in;
+    background-color: darkgray;
   }
   .navbar-container {
     @include flex(horizontal, center, center);
@@ -56,19 +87,17 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
-    height: 10vh;
+    height: 7vh;
     background-color: transparent;
-    button{
-      background-color: transparent;
-      border-style: none;
-      border-radius: 0.35rem;
-      margin: 1vh;
-      padding: 1vh;
+    .nav-button {
+      @include navButton(transparent, $white);
     }
-    .navbar-text {
-      color: $white;
-      opacity: 1;
-      font-size: 20px;
+    .nav-button:hover {
+      background-color: darkgray;
+    }
+    .nav-button-active {
+      @include navButton($white, $black);
+      color: $black;
     }
   }
 }
