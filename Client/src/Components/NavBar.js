@@ -8,7 +8,8 @@ class NavBar extends Component {
     super(props);
     
     this.state = {
-      scroll: false
+      scroll: false,
+      highlight: ''
     };
 
     this.handleNavScroll = this.handleNavScroll.bind(this);
@@ -23,25 +24,35 @@ class NavBar extends Component {
   }
 
   handleNavScroll() {
-    if (!document.body.scrollTop) {
+    let x, y;
+
+    if ( typeof window.pageYOffset === 'number' ) {
+      x = window.pageXOffset;
+      y = window.pageYOffset;
+      // console.log('in offset, ', y);
+    } else {
+      x = document.body.scrollLeft;
+      y = document.body.scrollTop;
+    }
+
+    if (y <= 10) {
       this.setState({ scroll: false });
     } else {
       this.setState({ scroll: true });
     }
-  } 
+  }
+
+  handleClick(section) {
+    this.props.handlePageScroll(section);
+    // this.setState({ highlight: section });
+  }
   
   render() {
     return (
       <div className={this.state.scroll ? 'nav-scroll': 'navbar-container'}>
-        <button onClick={() => this.props.handlePageScroll('aboutme')}>
-          <text className='navbar-text'>About Me</text>
-        </button>
-        <button onClick={() => this.props.handlePageScroll('projects')}>
-          <text className='navbar-text'>Projects</text>
-        </button>
-        <button onClick={() => this.props.handlePageScroll('resume')}>
-          <text className='navbar-text'>Resume</text>
-        </button>
+        <button className={this.state.highlight === 'aboutme' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('aboutme')}>About Me</button>
+        <button className={this.state.highlight === 'projects' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('projects')}>Projects</button>
+        <button className={this.state.highlight === 'resume' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('resume')}>Resume</button>
       </div>
     );
   }
