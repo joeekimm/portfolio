@@ -2,11 +2,11 @@ const webpack = require('webpack');
 const path = require('path');
 
 const SRC_DIR = path.resolve(__dirname, 'Client/src');
-const BUILD_DIR = path.resolve(__dirname, 'Client/Static');
+const BUILD_DIR = path.resolve(__dirname, 'Client/Static/dist');
 
 module.exports = {
+  watch: true,
   entry: [
-    // 'react-hot-loader/patch',
     // 'webpack-dev-server/client?http://localhost:8080/',
     // 'webpack/hot/only-dev-server',
     path.resolve(SRC_DIR, 'index.js')
@@ -15,14 +15,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: BUILD_DIR,
-    // publicPath: '/'
   },
-  // devServer: {
-  //   hot: true,
-  //   contentBase: 'Client/Static/',
-  //   publicPath: '/',
-  //   historyApiFallback: true
-  // },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
   },
@@ -30,21 +23,24 @@ module.exports = {
     colors: true,
     reasons: true
   },
-  plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NamedModulesPlugin()
-  ],
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin(),
+  //   new webpack.NamedModulesPlugin()
+  // ],
   module: {
     loaders: [{
-      loader: 'babel-loader',
       exclude: /node_modules/,
       test: /\.js$/,
+      loader: 'babel-loader',
       query: {
         presets: ['es2015', 'react'],
       }
     }, {
       test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      use: ['style-loader', 'css-loader'],
+    }, {
+      test: /\.(gif|svg|jpg|png)$/,
+      loader: "file-loader",
     }]
   },
   watch: true
