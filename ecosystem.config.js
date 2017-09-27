@@ -8,7 +8,7 @@ module.exports = {
   deploy: {
     production: {
       user: "ec2-user",
-      host: "ec2-34-210-81-52.us-west-2.compute.amazonaws.com",
+      host: "ec2-35-167-149-106.us-west-2.compute.amazonaws.com",
       key: "~/.ssh/portfolio.pem",
       ref: "origin/master",
       repo: "git@github.com:joeekimm/portfolio.git",
