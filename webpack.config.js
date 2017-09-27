@@ -5,7 +5,6 @@ const SRC_DIR = path.resolve(__dirname, 'Client/src');
 const BUILD_DIR = path.resolve(__dirname, 'Client/Static/dist');
 
 module.exports = {
-  watch: true,
   entry: [
     // 'webpack-dev-server/client?http://localhost:8080/',
     // 'webpack/hot/only-dev-server',
