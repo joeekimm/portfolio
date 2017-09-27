@@ -29,14 +29,13 @@ class App extends Component {
         <NavBar handlePageScroll={this.handlePageScroll}/>
         <div className='up-top'><button className='up-top-button' onClick={() => this.handlePageScroll('home')}>Top</button></div>
         <div className='main home' id='home'>
-          <h1 className='titles'>Home</h1>
+          <button className='home-button'>Home</button>
         </div>
         <div className='main aboutme' id='aboutme'>
           <img className='portfolio-picture' src={require('../../Static/img/portfoliopic.jpg')}/>
           <h1 className='titles'>Joe Kim</h1>
           <p>Hello, my name is Joe.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem nisl, tristique blandit ipsum et, malesuada efficitur diam. Pellentesque accumsan, ligula ac laoreet blandit, magna magna ornare quam, nec iaculis nisl purus et urna. Donec at tristique felis. Cras blandit augue in varius suscipit. Quisque a lacus tincidunt justo facilisis convallis. Vivamus sagittis ante at tincidunt blandit. Nam rutrum turpis metus, eget volutpat leo posuere sit amet. Curabitur viverra convallis velit, quis dignissim enim scelerisque vitae. Praesent posuere tellus ex, a vestibulum tortor tempor et. Donec in rutrum nunc. Nam placerat facilisis maximus. Sed aliquet pellentesque neque ut faucibus. Suspendisse ac ornare sapien, eu tempus sapien. Ut quam dui, ultricies nec finibus ut, condimentum nec orci. Nullam ut condimentum dui. Donec sed blandit ante.</p>
-          <p>Cras vehicula fermentum varius. Ut condimentum libero nec aliquam tempor. Cras tristique tempor libero, ac dapibus mauris cursus quis. Nam vestibulum molestie luctus. Nunc gravida enim sit amet quam efficitur auctor. Nullam eget tincidunt quam. Ut faucibus elit et elit lobortis, a fermentum quam porttitor. Quisque erat tellus, cursus sit amet dui eget, convallis suscipit odio. Aenean eleifend tempor luctus. Donec egestas, justo nec ullamcorper gravida, nisl ipsum sodales nunc, at consectetur lectus justo at mauris. Vestibulum id luctus dui, vitae tempor augue. Mauris a justo quam.</p>
         </div>
         <div className='main projects' id='projects'>
           <h1 className='titles'>Projects</h1>
