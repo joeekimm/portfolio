@@ -5,6 +5,7 @@ const SRC_DIR = path.resolve(__dirname, 'Client/src');
 const BUILD_DIR = path.resolve(__dirname, 'Client/Static/dist');
 
 module.exports = {
+  watch: true,
   entry: [
     // 'webpack-dev-server/client?http://localhost:8080/',
     // 'webpack/hot/only-dev-server',
@@ -40,6 +41,9 @@ module.exports = {
     }, {
       test: /\.(gif|svg|jpg|png)$/,
       loader: "file-loader",
-    }]
+    }, {
+      test: /\.wav$/,
+      loader: 'file-loader'
+  }]
   }
 };

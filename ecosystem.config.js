@@ -13,7 +13,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:joeekimm/portfolio.git",
       path: "/home/ec2-user/portfolio",
-      "post-deploy": "npm install && webpack && pm2 startOrRestart ecosystem.config.js"
+      "post-deploy": "npm install && npm run compile && pm2 startOrRestart ecosystem.config.js"
     }
   }
 };

@@ -3,6 +3,7 @@ import TweenLite from 'gsap';
 import scrollTo from '../../../node_modules/gsap/ScrollToPlugin';
 
 import NavBar from "./NavBar";
+import Metronome from './Metronome';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class App extends Component {
         <NavBar handlePageScroll={this.handlePageScroll}/>
         <div className='up-top'><button className='up-top-button' onClick={() => this.handlePageScroll('home')}>Top</button></div>
         <div className='main home' id='home'>
+          <Metronome />
           <button className='home-button'>Home</button>
         </div>
         <div className='main aboutme' id='aboutme'>

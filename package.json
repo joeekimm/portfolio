@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./Server/server.js",
-    "compile": "webpack -d -w",
+    "compile": "webpack",
     "dev": "./node_modules/.bin/webpack-dev-server",
     "restart": "pm2 startOrRestart ecosystem.config.js",
     "deploy": "pm2 deploy ecosystem.config.js production",
