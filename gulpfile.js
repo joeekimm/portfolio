@@ -29,7 +29,7 @@ gulp.task('nodemon', () => {
 gulp.task('webpack', (callback) => {
   gulp.src('./Client/src/index.js')
   .pipe(webpackStream(webpackConfig), webpack)
-  .pipe(gulp.dest('./Client/Static/dist'));
+  .pipe(gulp.dest('./Client/Static'));
 })
 
 

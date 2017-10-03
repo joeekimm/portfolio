@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const SRC_DIR = path.resolve(__dirname, 'Client/src');
-const BUILD_DIR = path.resolve(__dirname, 'Client/Static/dist');
+const BUILD_DIR = path.resolve(__dirname, 'Client/Static');
 
 module.exports = {
   watch: true,
