@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Carousel } from 'react-customizable-carousel'
 import TweenLite from 'gsap';
 import scrollTo from '../../../node_modules/gsap/ScrollToPlugin';
 
@@ -15,6 +14,10 @@ class App extends Component {
     };
 
     this.handlePageScroll = this.handlePageScroll.bind(this);
+  }
+
+  componentDidMount() {
+    document.body.style.overflow = 'hidden';
   }
 
   handlePageScroll(id) {
@@ -39,26 +42,24 @@ class App extends Component {
         <div className='main projects' id='projects'>
           <h1 className='titles'>Projects</h1>
           <div className='projects-group'>
-            <Carousel>
-              <div >
-                <div>
-                  <h1>Bartr</h1>
-                  <p>Hello this is Bartr</p>
-                </div>
-              </div>
-              <div >
-                <div>
-                  <h2>Snippr</h2>
-                  <p>Hello this is Snippr</p>
-                </div>
-              </div>
-              <div >
-                <div>
-                  <h2>Homemade</h2>
-                  <p>Hello this is Homemade</p>
-                </div>
-              </div>
-            </Carousel>
+            <div className='project'>
+              <h1>Bartr</h1>
+              <p>Hello this is Bartr</p>
+              <p>Hello this is Bartr</p>
+              <p>Hello this is Bartr</p>
+            </div>
+            <div className='project'>
+              <h2>Snippr</h2>
+              <p>Hello this is Snippr</p>
+              <p>Hello this is Snippr</p>
+              <p>Hello this is Snippr</p>
+            </div>
+            <div className='project'>
+              <h2>Homemade</h2>
+              <p>Hello this is Homemade</p>
+              <p>Hello this is Homemade</p>
+              <p>Hello this is Homemade</p>
+            </div>
           </div>
         </div>
         <div className='main resume' id='resume'>
