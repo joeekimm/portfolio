@@ -59,7 +59,6 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    width: 100%;
     color: #fff; }
     .main.home .home-button {
       background-color: transparent;
@@ -79,7 +78,6 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    width: 100%;
     color: #fff;
     text-align: center; }
     .main.aboutme .portfolio-picture {
@@ -92,22 +90,36 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    width: 100%;
-    color: #fff; }
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .main.projects .projects-group {
-      background-color: #fff;
-      color: #000; }
-      .main.projects .projects-group * {
-        min-height: 0;
-        min-width: 0; }
+      width: 80vw;
+      height: 50vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .main.projects .project {
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-      margin: 10vh;
-      padding: 5vh;
-      background-color: transparent;
-      height: 100vh;
-      width: 100%;
-      color: #fff;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -128,7 +140,6 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    width: 100%;
     color: #fff; }
   .main .up-top {
     display: -webkit-box;
