@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TweenLite from 'gsap';
+import Typist from 'react-typist';
 import scrollTo from '../../../node_modules/gsap/ScrollToPlugin';
 
 import NavBar from "./NavBar";
@@ -10,28 +11,49 @@ class App extends Component {
     super(props);
 
     this.state = {
-      isFlipped: false
+      showNav: false
     };
 
+    this.toTop = this.toTop.bind(this);
     this.handlePageScroll = this.handlePageScroll.bind(this);
+    this.handleEnlarge = this.handleEnlarge.bind(this);
   }
 
   componentDidMount() {
     document.body.style.overflow = 'hidden';
+    TweenLite.to(window, 0.1, { scrollTo: 'body' });
+    window.pageYOffset !== 8 ? this.setState({ showNav: true}) : null;
+  }
+
+  toTop(id) {
+    this.handlePageScroll(id);
+    this.handleEnlarge(id);
+    setTimeout(() => this.setState({ showNav: false }), 0);
   }
 
   handlePageScroll(id) {
-    TweenLite.to(window, 0.5, { scrollTo: `#${id}` });
+    TweenLite.to(window, 0.75, { scrollTo: `#${id}` });
+  }
+
+  handleEnlarge(location) {
+    const button = document.getElementsByClassName('home-button');
+    if (location === 'home') {
+      TweenLite.to(button, 0.75, { fontSize: '156.25%', opacity: 1, zIndex: 0 });
+    } else {
+      TweenLite.to(button, 0.75, { fontSize: '1000%', opacity: 0, zIndex: -10 });
+      TweenLite.to(window, 0.75, { scrollTo: '#aboutme' });
+    }
   }
 
   render() {
     return (
       <div className='main'>
-        <NavBar handlePageScroll={this.handlePageScroll}/>
-        <div className='up-top'><button className='up-top-button' onClick={() => this.handlePageScroll('home')}>Top</button></div>
+        {this.state.showNav ? <NavBar handlePageScroll={this.handlePageScroll} toTop={this.toTop}/> : null}
         <div className='main home' id='home'>
-          <Metronome />
-          <button className='home-button'>Home</button>
+          {/* <Metronome /> */}
+          <Typist avgTypingDelay={150} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
+            <button className='home-button' onClick={() => {this.handleEnlarge('nothome'); this.setState({ showNav: true })}}>Click To Get Started</button>
+          </Typist>
         </div>
         <div className='main aboutme' id='aboutme'>
           <img className='portfolio-picture' src={require('../../Static/img/portfoliopic.jpg')}/>

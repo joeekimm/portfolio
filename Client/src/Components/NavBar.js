@@ -50,9 +50,10 @@ class NavBar extends Component {
   render() {
     return (
       <div className={this.state.scroll ? 'nav-scroll': 'navbar-container'}>
-        <button className={this.state.highlight === 'aboutme' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('aboutme')}>About Me</button>
-        <button className={this.state.highlight === 'projects' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('projects')}>Projects</button>
-        <button className={this.state.highlight === 'resume' ? 'nav-button-active' : 'nav-button'} onClick={() => this.handleClick('resume')}>Resume</button>
+        <button className={this.state.highlight === 'aboutme' ? 'nav-button-active' : 'nav-button'} id='grid-aboutme' onClick={() => this.handleClick('aboutme')}>About Me</button>
+        <button className={this.state.highlight === 'projects' ? 'nav-button-active' : 'nav-button'} id='grid-projects' onClick={() => this.handleClick('projects')}>Projects</button>
+        <button className={this.state.highlight === 'resume' ? 'nav-button-active' : 'nav-button'} id='grid-resume' onClick={() => this.handleClick('resume')}>Resume</button>
+        <button className='nav-button' id='grid-top' onClick={() => this.props.toTop('home')}>Top</button>
       </div>
     );
   }
