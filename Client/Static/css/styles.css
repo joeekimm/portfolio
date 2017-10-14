@@ -1,14 +1,14 @@
 body {
   background-color: #000; }
 
-.nav-scroll {
+.navbar-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: horizontal;
+          flex-direction: horizontal;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -21,7 +21,36 @@ body {
   width: 100vw;
   top: 0;
   height: 7vh;
+  background-color: transparent; }
+  .navbar-container .nav-button {
+    background-color: transparent;
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 25px;
+    border-style: none;
+    border-radius: 0.35rem;
+    outline: none;
+    margin: 1vh;
+    padding: 1vh;
+    font-size: 1.5vw; }
+  .navbar-container .nav-button:hover {
+    border: 1px solid white; }
+
+.nav-scroll {
+  display: grid;
+  grid-template-columns: 35% 10% 10% 10% 25% 10%;
+  grid-column-start: 2;
+  -webkit-transition: background-color .2s ease-in;
+  transition: background-color .2s ease-in;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 7vh;
   background-color: #fff; }
+  .nav-scroll #grid-aboutme {
+    grid-column: 2 / 3; }
+  .nav-scroll #grid-top {
+    grid-column: 6 / 7; }
   .nav-scroll .nav-button {
     background-color: transparent;
     color: #000;
@@ -31,7 +60,8 @@ body {
     border-radius: 0.35rem;
     outline: none;
     margin: 1vh;
-    padding: 1vh; }
+    padding: 1vh;
+    font-size: 1.5vw; }
   .nav-scroll .nav-button:hover {
     border: 1px solid black; }
 
@@ -59,7 +89,8 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff; }
+    color: #fff;
+    width: 30vw; }
     .main.home .home-button {
       background-color: transparent;
       color: #fff;
@@ -69,7 +100,10 @@ body {
       border-radius: 0.35rem;
       outline: none;
       margin: 1vh;
-      padding: 1vh; }
+      padding: 1vh;
+      position: fixed;
+      left: 50%;
+      margin-left: -7.5vw; }
     .main.home .home-button:hover {
       border: 1px solid #fff; }
   .main.aboutme {
@@ -141,70 +175,6 @@ body {
     background-color: transparent;
     height: 100vh;
     color: #fff; }
-  .main .up-top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100vw;
-    position: fixed;
-    top: 7vh;
-    margin: 1vh;
-    padding: 1vh; }
-  .main .up-top-button {
-    background-color: transparent;
-    color: #fff;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-    font-size: 25px;
-    border-style: none;
-    border-radius: 0.35rem;
-    outline: none;
-    margin: 1vh;
-    padding: 1vh; }
-  .main .up-top-button:hover {
-    border: 1px solid white; }
-  .main .navbar-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: horizontal;
-            flex-direction: horizontal;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: background-color .2s ease-in;
-    transition: background-color .2s ease-in;
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    height: 7vh;
-    background-color: transparent; }
-    .main .navbar-container .nav-button {
-      background-color: transparent;
-      color: #fff;
-      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-      font-size: 25px;
-      border-style: none;
-      border-radius: 0.35rem;
-      outline: none;
-      margin: 1vh;
-      padding: 1vh; }
-    .main .navbar-container .nav-button:hover {
-      border: 1px solid white; }
 
 .metronome {
   text-align: center;
