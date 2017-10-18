@@ -11,7 +11,7 @@ const browserSync = require('browser-sync').create();
 const Promise = require('bluebird');
 const path = require('path');
 
-const webpackConfig = require('./webpack.config');
+const webpackConfig = require('./webpack.config.dev.js');
 const SRC_DIR = path.resolve(__dirname, 'Client/src');
 
 
