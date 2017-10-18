@@ -1,5 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 body {
   background-color: #000; }
+
+#primary-text {
+  font-family: 'Playfair Display';
+  font-weight: Bold Italic; }
+
+#secondary-text {
+  font-family: 'Raleway';
+  font-weight: normal; }
 
 .navbar-container {
   display: -webkit-box;
@@ -20,11 +30,11 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 7vh;
+  height: 7.75vh;
   background-color: transparent; }
   .navbar-container .nav-button {
     background-color: transparent;
-    color: #fff;
+    color: #939393;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: 25px;
     border-style: none;
@@ -32,7 +42,9 @@ body {
     outline: none;
     margin: 1vh;
     padding: 1vh;
-    font-size: 1.5vw; }
+    font-size: 1.5vw;
+    font-family: 'Playfair Display';
+    font-weight: Bold Italic; }
   .navbar-container .nav-button:hover {
     border: 1px solid white; }
 
@@ -45,8 +57,8 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 7vh;
-  background-color: #fff; }
+  height: 7.75vh;
+  background-color: #fbf9f1; }
   .nav-scroll #grid-aboutme {
     grid-column: 2 / 3; }
   .nav-scroll #grid-top {
@@ -61,7 +73,9 @@ body {
     outline: none;
     margin: 1vh;
     padding: 1vh;
-    font-size: 1.5vw; }
+    font-size: 1.5vw;
+    font-family: 'Playfair Display';
+    font-weight: Bold Italic; }
   .nav-scroll .nav-button:hover {
     border: 1px solid black; }
 
@@ -81,19 +95,20 @@ body {
           align-items: center; }
   .main .titles {
     padding: 5vh;
-    margin-bottom: 10vh;
-    font-size: 50px; }
+    margin-bottom: 10vh; }
   .main.home {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff;
-    width: 30vw; }
+    color: #939393;
+    width: 30vw;
+    text-align: center;
+    font-size: 200%; }
     .main.home .home-button {
       background-color: transparent;
-      color: #fff;
+      color: #939393;
       font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
       font-size: 25px;
       border-style: none;
@@ -101,9 +116,12 @@ body {
       outline: none;
       margin: 1vh;
       padding: 1vh;
-      position: fixed;
-      left: 50%;
-      margin-left: -7.5vw; }
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 120%; }
     .main.home .home-button:hover {
       border: 1px solid #fff; }
   .main.aboutme {
@@ -112,7 +130,7 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff;
+    color: #939393;
     text-align: center; }
     .main.aboutme .portfolio-picture {
       height: 300px;
@@ -124,7 +142,7 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff;
+    color: #939393;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -174,7 +192,7 @@ body {
     padding: 20px;
     background-color: transparent;
     height: 100vh;
-    color: #fff; }
+    color: #939393; }
 
 .metronome {
   text-align: center;

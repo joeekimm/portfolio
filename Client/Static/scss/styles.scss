@@ -1,10 +1,22 @@
 @import '_variables';
 @import '_partials';
 
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 // @import "~react-customizable-carousel/styles/index.css";
 
 body {
   background-color: $black;
+}
+
+#primary-text {
+  font-family: 'Playfair Display';
+  font-weight: Bold Italic;
+}
+
+#secondary-text {
+  font-family: 'Raleway';
+  font-weight: normal;
 }
 
 /////// REFACTOR SOME OF THE CODE DOWN INTO MIXINS ////////
@@ -17,11 +29,13 @@ body {
   position: fixed;
   width: 100vw;
   top: 0;
-  height: 7vh;
+  height: 7.75vh;
   background-color: transparent;
   .nav-button {
-    @include navButton(transparent, $white);
+    @include navButton(transparent, $gray);
     font-size: 1.5vw;
+    font-family: 'Playfair Display';
+    font-weight: Bold Italic;
   }
   .nav-button:hover {
     border: 1px solid white;
@@ -50,11 +64,13 @@ body {
     position: fixed;
     width: 100vw;
     top: 0;
-    height: 7vh;
-    background-color: $white;
+    height: 7.75vh;
+    background-color: #fbf9f1;
     .nav-button {
       @include navButton(transparent, $black);
       font-size: 1.5vw;
+      font-family: 'Playfair Display';
+      font-weight: Bold Italic;
   }
   .nav-button:hover {
     border: 1px solid black;
@@ -68,16 +84,20 @@ body {
   .titles {
     padding: 5vh;
     margin-bottom: 10vh;
-    font-size: 50px;
   }
   &.home {
     @include sectionFormat(transparent);
     width: 30vw;
+    text-align: center;
+    font-size: 200%;
     .home-button {
-      @include navButton(transparent, $white);
-      position: fixed;
-      left: 50%;
-      margin-left: -7.5vw;
+      @include navButton(transparent, $gray);
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 120%;
     }
     .home-button:hover {
       border: 1px solid $white;
