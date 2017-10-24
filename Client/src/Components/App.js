@@ -69,7 +69,7 @@ class App extends Component {
           <h1 className='titles' id='primary-text'>Projects</h1>
           <div className='projects-group'>
             <div className='project'>
-              <h1 id='secondary-text'>Bartr</h1>
+              <h2 id='secondary-text'>Bartr</h2>
               <p id='secondary-text'>Hello this is Bartr</p>
               <p id='secondary-text'>Hello this is Bartr</p>
               <p id='secondary-text'>Hello this is Bartr</p>
