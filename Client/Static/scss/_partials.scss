@@ -28,3 +28,21 @@
   margin: 1vh;
   padding: 1vh;
 }
+
+@mixin navContainer ($bg-color, $hover-color) {
+  transition: background-color .2s ease-in;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 7.75vh;
+  background-color: $bg-color;
+  .nav-button {
+    @include navButton(transparent, $gray);
+    font-size: 1.5vw;
+    font-family: 'Playfair Display';
+    font-weight: Bold Italic;
+  }
+  .nav-button:hover {
+    border: 1px solid $hover-color;
+  }
+}
