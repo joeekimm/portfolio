@@ -23,33 +23,97 @@ body {
 
 //============= NAVBAR ==================//
 
-.navbar-container {
-  display: grid;
-  grid-template-columns: 35% 10% 10% 10% 25% 10%;
-  grid-column-start: 2;
-  #grid-aboutme {
-    grid-column: 2 / 3;
-  }
-  #grid-top {
-    grid-column: 6 / 7;
-  }
-  @include navContainer(transparent, white);
+#navbar-container {
+  width: 20vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
+  overflow: scroll;
+  // z-index: 1000;
+  // display: flex;
+  // flex-direction: column;
+  // background-color: transparent;
+  // .nav-button {
+  //   @include navButton(transparent, $gray);
+  //   font-size: 1.5vw;
+  //   font-family: 'Playfair Display';
+  //   font-weight: Bold Italic;
+  // }
+  // .nav-button:hover {
+  //   border: 1px solid white;
+  // }
+  // #grid-aboutme {
+  //   grid-column: 2 / 3;
+  // }
+  // #grid-top {
+  //   grid-column: 6 / 7;
+  // }
 }
-  
-  //============= SCROLL ==================//
-  
-.nav-scroll {
-  // @include flex(row, center, center);
-  display: grid;
-  grid-template-columns: 35% 10% 10% 10% 25% 10%;
-  grid-column-start: 2;
-  #grid-aboutme {
-    grid-column: 2 / 3;
-  }
-  #grid-top {
-    grid-column: 6 / 7;
-  }
-  @include navContainer(#fbf9f1, black);
+
+#navbar-container.hide {
+  transform: translate3d(-20vw, 0, 0);
+  transition: transform 0.5s cubic-bezier(1, 0, 0.52, 0);
+}
+
+#navbar-container.show {
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}
+
+#navbar-container h2 a {
+  color: #333;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+#navbar-container h2 a:hover {
+  text-decoration: underline;
+}
+
+//============ HAMBURGER MENU ===============//
+
+#hamburgerButton {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.menu-container {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fbf9f1;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change {
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 //============ HOME PAGE =============//

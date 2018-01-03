@@ -27,10 +27,11 @@
   outline: none;
   margin: 1vh;
   padding: 1vh;
+  cursor: pointer;
 }
 
-@mixin navContainer ($bg-color, $hover-color) {
-  transition: background-color .2s ease-in;
+@mixin navContainer ($bg-color, $hover-color, $trans-interval) {
+  transition: background-color $trans-interval ease-in;
   position: fixed;
   width: 100vw;
   top: 0;
