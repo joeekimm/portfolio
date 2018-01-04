@@ -26,7 +26,7 @@ class NavBar extends Component {
     if (this.props.menuVisibility) {
       visibility = "show";
     }
-
+    
     return (
       <div
         id="navbar-container"

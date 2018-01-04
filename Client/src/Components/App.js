@@ -53,12 +53,18 @@ class App extends Component {
   }
 
   render() {
+    let visibility = "hide";
+
+    if (this.state.visible) {
+      visibility = "show";
+    }
+
     return (
-      <div className='main'>
+      <div className='main' id={visibility}>
         <NavBar hamburgerClick={this.hamburgerClick} menuVisibility={this.state.visible} handlePageScroll={this.handlePageScroll} toTop={this.toTop}/>
         {/* <Particles params={particlesJSON} style={{position: 'fixed', margin: '0', marginLeft: '-50%', padding: '0', zIndex: '-1'}} height={'100vh'} width={'100vw'}/> */}
-        <MenuButton hamburgerClick={this.hamburgerClick} menu={this.state.menu}/>
         <div className='main home' id='home'>
+          <MenuButton hamburgerClick={this.hamburgerClick} menu={this.state.menu}/>
           {/* <Metronome /> */}
           <Typist className='typist' avgTypingDelay={100} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
             <h1 id='primary-text'>Joe (Yubin) Kim</h1>
