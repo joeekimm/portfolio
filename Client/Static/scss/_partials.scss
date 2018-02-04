@@ -1,12 +1,13 @@
 @import '_variables';
 
-@mixin sectionFormat($bg-color, $marg: 0, $pad: 20px, $secHeight: 100vh) {
+@mixin sectionFormat($bg-color, $marg: 0, $padleft: 0, $padright: 0, $secHeight: 100vh) {
   font-family: $font-theme;
   margin: $marg;
-  padding: $pad;
+  padding-left: $padleft;
+  padding-right: $padright;
   background-color: $bg-color;
   height: $secHeight;
-  // width: 100%;
+  width: 100%;
   color: $gray;
 }
 

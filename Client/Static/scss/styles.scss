@@ -5,8 +5,16 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 // @import "~react-customizable-carousel/styles/index.css";
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+  // overflow: auto;
+}
+
 body {
-  background-color: rgb(61, 58, 58);
+  background-color: #181818;
 }
 
 #primary-text {
@@ -17,6 +25,7 @@ body {
 #secondary-text {
   font-family: 'Raleway';
   font-weight: normal;
+  font-size: 20px;
 }
 
 /////// REFACTOR SOME OF THE CODE DOWN INTO MIXINS ////////
@@ -31,8 +40,10 @@ body {
   display: block;
   top: 0;
   left: 0;
+  padding-top: 4%;
   transition: transform 0.5s;
   overflow: scroll;
+  font-size: 20px;
 }
 
 #navbar-container.hide {
@@ -56,7 +67,7 @@ body {
 }
 
 #show {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .7);
   margin-left: 15vw;
   transition: margin-left 0.5s;
 }
@@ -118,36 +129,55 @@ body {
     margin-bottom: 10vh;
   }
   &.home {
+    .typist {
+      z-index: 100;
+    }
     @include sectionFormat(transparent);
-    width: 30vw;
+    top: 0;
     text-align: center;
     font-size: 200%;
-    .home-button {
-      @include navButton(transparent, $gray);
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      font-size: 120%;
-    }
-    .home-button:hover {
-      border: 1px solid $white;
-    }
   }
   &.aboutme {
-    @include sectionFormat(transparent, 5%);
-    text-align: center;
+    @include sectionFormat(transparent);
+    @include flex(column, space-around, center);
+    text-align: left;
     .portfolio-picture {
+      align-self: flex-start;
+      margin-left: 100px;
       height: 300px;
       width: 270px;
       border-radius: 100px;
     }
   }
+  .aboutme-name {
+    font-size: 72px;
+  }
+  #aboutme-bar {
+    @include flex(row, center, space-between);
+    align-self: flex-start;
+  }
+  #aboutme-assets {
+    text-align: center;
+    margin-left: 50px;
+  }
+  #aboutme-links {
+    @include flex(row, center, center);
+  }
+  .aboutme-text {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  #img-links {
+    // background-color: white;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    height: 70px;
+    width: 70px;
+    margin: 15px;
+  }
   &.projects {
-    @include sectionFormat(transparent, 5%);
+    @include sectionFormat(black);
     @include flex(column, center, center);
-
     .projects-group {
       width: 80vw;
       height: 50vh;
@@ -159,7 +189,7 @@ body {
     }
   }
   &.resume {
-    @include sectionFormat(transparent, 5%);
+    @include sectionFormat(transparent);
   }
 }
   
