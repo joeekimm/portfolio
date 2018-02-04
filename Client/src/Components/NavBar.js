@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
 import Projects from "./Projects";
-import Resume from "./Resume";
 
 class NavBar extends Component {
   constructor(props) {
@@ -55,18 +54,6 @@ class NavBar extends Component {
             }}
           >
             Projects
-          </a>
-        </h2>
-        <h2>
-          <a
-            className="nav-button"
-            id="grid-resume"
-            onClick={() => {
-              this.handleClick("resume");
-              this.props.hamburgerClick();
-            }}
-          >
-            Resume
           </a>
         </h2>
         <h2>
