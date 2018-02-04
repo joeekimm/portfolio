@@ -8,7 +8,6 @@ import particlesJSON from '../../Static/assets/particles.json';
 import NavBar from "./NavBar";
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import Resume from './Resume';
 import MenuButton from './MenuButton';
 // import Metronome from './Metronome';
 
@@ -62,10 +61,10 @@ class App extends Component {
     return (
       <div className='main' id={visibility}>
         <NavBar hamburgerClick={this.hamburgerClick} menuVisibility={this.state.visible} handlePageScroll={this.handlePageScroll} toTop={this.toTop}/>
-        {/* <Particles params={particlesJSON} style={{position: 'fixed', margin: '0', marginLeft: '-50%', padding: '0', zIndex: '-1'}} height={'100vh'} width={'100vw'}/> */}
+        <MenuButton hamburgerClick={this.hamburgerClick} menu={this.state.menu}/>
         <div className='main home' id='home'>
-          <MenuButton hamburgerClick={this.hamburgerClick} menu={this.state.menu}/>
           {/* <Metronome /> */}
+          <Particles params={particlesJSON} style={{position: 'absolute', top: '0', left: '0', backgroundColor: 'black', zIndex: '-1'}} height={'100vh'} width={'100vw'}/>
           <Typist className='typist' avgTypingDelay={100} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
             <h1 id='primary-text'>Joe (Yubin) Kim</h1>
             <h2 id='primary-text'>Software Engineer</h2>
@@ -73,7 +72,6 @@ class App extends Component {
         </div>
         <AboutMe />
         <Projects />
-        <Resume />
       </div>
     );
   }
