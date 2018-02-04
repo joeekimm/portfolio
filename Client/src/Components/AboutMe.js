@@ -4,15 +4,24 @@ class AboutMe extends Component {
   render() {
     return (
       <div className="main aboutme" id="aboutme">
-        <img
-          className="portfolio-picture"
-          src={require("../../Static/img/portfoliopic.jpg")}
-        />
-        <h1 className="titles" id="primary-text">
-          Joe Kim
-        </h1>
-        <p id="secondary-text">Hello, my name is Joe.</p>
-        <p id="secondary-text">
+        <div id='aboutme-bar'>
+          <img
+            className="portfolio-picture"
+            src={require("../../Static/img/portfoliopic.jpg")}
+          />
+          <div id='aboutme-assets'>
+            <h1 className='aboutme-name' id="primary-text">
+              Hi, I'm Joe
+            </h1>
+            <div id='aboutme-links'>
+              <a href='https://github.com/joeekimm'><img id='img-links' src={require('../../Static/img/github.png')}/></a>
+              <a href='https://linkedin.com/in/joeyubinkim'><img id='img-links' src={require('../../Static/img/linkedin.png')}/></a>
+              <a href='mailto:joeekimm@gmail.com'><img id='img-links' src={require('../../Static/img/gmail.png')}/></a>
+              <a href='https://docs.google.com/document/d/1MABp9-d0F0kiK3UxakOojjNBqcb1F0bAkDIWfeOLcyc/edit?usp=sharing'><img id='img-links' src={require('../../Static/img/resume.png')}/></a>
+            </div>
+          </div>
+        </div>
+        <p className='aboutme-text'id="secondary-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem
           nisl, tristique blandit ipsum et, malesuada efficitur diam.
           Pellentesque accumsan, ligula ac laoreet blandit, magna magna ornare
