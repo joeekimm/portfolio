@@ -16,7 +16,7 @@ class AboutMe extends Component {
             <div id='aboutme-links'>
               <a href='https://github.com/joeekimm'><img id='img-links' src={require('../../Static/img/github.png')}/></a>
               <a href='https://linkedin.com/in/joeyubinkim'><img id='img-links' src={require('../../Static/img/linkedin.png')}/></a>
-              <a href='mailto:joeekimm@gmail.com'><img id='img-links' src={require('../../Static/img/gmail.png')}/></a>
+              <a href='mailto:joeekimm@gmail.com'><img id='img-links' src={require('../../Static/img/Gmail.png')}/></a>
               <a href='https://docs.google.com/document/d/1MABp9-d0F0kiK3UxakOojjNBqcb1F0bAkDIWfeOLcyc/edit?usp=sharing'><img id='img-links' src={require('../../Static/img/resume.png')}/></a>
             </div>
           </div>
