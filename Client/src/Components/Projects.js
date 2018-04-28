@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
 class Projects extends Component {
+  constructor(props, context) {
+    super(props, context);
+  }
+  
   render() {
+    console.log(this.props);
     return (
-      <div className="main projects" id="projects">
+      <div className="main projects" id="projects" id={this.props.visibility}>
         <h1 className="titles" id="primary-text">
           Projects
         </h1>

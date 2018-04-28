@@ -33,48 +33,56 @@ body {
 //============= NAVBAR ==================//
 
 #navbar-container {
-  width: 15vw;
+  @include flex(column, flex-start, flex-start);
+  width: 40vw;
   height: 100%;
   background-color: rgb(87, 87, 87);
   position: fixed;
-  display: block;
+  // display: block;
   top: 0;
   left: 0;
   padding-top: 4%;
-  transition: transform 0.5s;
   overflow: scroll;
   font-size: 20px;
 }
 
 #navbar-container.hide {
-  transform: translate3d(-15vw, 0, 0);
-  transition: transform 0.5s;
+  transform: translate3d(-40vw, 0, 0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.7s;
 }
 
 #navbar-container.show {
   transform: translate3d(0vw, 0, 0);
+  opacity: 1;
   overflow: hidden;
+  transition: transform 0.5s, opacity 0.7s;
 }
 
 #navbar-container h2 a {
+  margin-left: 5vw;
   color: rgb(19, 19, 19);
-  padding: 8px 8px 8px 32px;
+  transition: color 0.4s;
+  // padding: 8px 8px 8px 32px;
   text-decoration: none;
 }
 
 #navbar-container h2 a:hover {
   color: #bebcb3;
+  transition: color 0.2s;
 }
 
 #show {
-  background-color: rgba(0, 0, 0, .7);
-  margin-left: 15vw;
-  transition: margin-left 0.5s;
+  // background-color: rgba(37, 37, 37, 0.2);
+  // margin-left: 15vw;
+  // transition: margin-left 0.5s;
+  // transition: background-color 0.5s;
 }
 
 #hide {
-  margin-left: 0vw;
-  transition: margin-left 0.5s;
+  // margin-left: 0vw;
+  // transition: margin-left 0.5s;
+  // transition: background-color 0.5s;
 }
 
 //============ HAMBURGER MENU ===============//
@@ -130,9 +138,9 @@ body {
   }
   &.home {
     .typist {
-      z-index: 100;
+      // z-index: 100;
     }
-    @include sectionFormat(transparent);
+    @include sectionFormat(#8c8c8c);
     top: 0;
     text-align: center;
     font-size: 200%;
@@ -176,7 +184,7 @@ body {
     margin: 15px;
   }
   &.projects {
-    @include sectionFormat(black);
+    @include sectionFormat(#8c8c8c);
     @include flex(column, center, center);
     .projects-group {
       width: 80vw;

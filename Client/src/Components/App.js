@@ -62,16 +62,16 @@ class App extends Component {
       <div className='main' id={visibility}>
         <NavBar hamburgerClick={this.hamburgerClick} menuVisibility={this.state.visible} handlePageScroll={this.handlePageScroll} toTop={this.toTop}/>
         <MenuButton hamburgerClick={this.hamburgerClick} menu={this.state.menu}/>
-        <div className='main home' id='home'>
+        <div className='main home' id='home' id={visibility}>
           {/* <Metronome /> */}
-          <Particles params={particlesJSON} style={{position: 'absolute', top: '0', left: '0', backgroundColor: 'black', zIndex: '-1'}} height={'100vh'} width={'100vw'}/>
+          {/* <Particles params={particlesJSON} style={{position: 'absolute', top: '0', left: '0', backgroundColor: 'black', zIndex: '-1'}} height={'100vh'} width={'100vw'}/> */}
           <Typist className='typist' avgTypingDelay={100} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
             <h1 id='primary-text'>Joe (Yubin) Kim</h1>
             <h2 id='primary-text'>Software Engineer</h2>
           </Typist>
         </div>
         <AboutMe />
-        <Projects />
+        <Projects visibility={visibility}/>
       </div>
     );
   }
