@@ -25,8 +25,15 @@ body {
 #secondary-text {
   font-family: 'Raleway';
   font-weight: normal;
-  font-size: 20px;
+  font-size: 30px;
 }
+
+#tertiary-text {
+  font-family: 'Raleway';
+  font-weight: normal;
+  font-size: 18px;
+}
+
 
 /////// REFACTOR SOME OF THE CODE DOWN INTO MIXINS ////////
 
@@ -55,6 +62,7 @@ body {
 #navbar-container.show {
   transform: translate3d(0vw, 0, 0);
   opacity: 1;
+  z-index: 100;
   overflow: hidden;
   transition: transform 0.5s, opacity 0.7s;
 }
@@ -88,6 +96,7 @@ body {
 //============ HAMBURGER MENU ===============//
 
 #hamburgerButton {
+  z-index: 101;
   position: fixed;
   top: 0;
   left: 0;
@@ -129,26 +138,35 @@ body {
 }
 
 //============ HOME PAGE =============//
+.typist-container {
+  @include flex(column, center, center);
+  background-color: #3d3d3d;
+  height: 50%;
+  width: 50%;
+}
 
 .main {
   @include flex(column, center, center);
   .titles {
     padding: 5vh;
     margin-bottom: 10vh;
+    font-size: 50px;
   }
   &.home {
     .typist {
-      // z-index: 100;
+      font-size: 75px;
     }
+    @include flex(row, flex-end, center);
     @include sectionFormat(#8c8c8c);
     top: 0;
     text-align: center;
     font-size: 200%;
   }
   &.aboutme {
-    @include sectionFormat(transparent);
+    @include sectionFormat(#3d3d3d);
     @include flex(column, space-around, center);
     text-align: left;
+    color: white;
     .portfolio-picture {
       align-self: flex-start;
       margin-left: 100px;
@@ -189,11 +207,34 @@ body {
     .projects-group {
       width: 80vw;
       height: 50vh;
-      @include flex(row, space-around, center);
+      @include flex(row, center, center);
     }
     .project {
       @include flex(column, start, center);
+      padding: 10px;
+      width: 50vw;
+      height: 50vh;
+      font-family: 'Raleway';
+      font-weight: normal;
       font-size: 20px;
+      color: red;
+    }
+    #bartr-container {
+      background-color: red;
+      background-image: url('../img/high-resolution-wallpaper-city-wallpaper-picture-night.jpg');
+      background-repeat: no-repeat;
+      background-size: 500px 500px;
+    }
+    #snippr-container {
+      background-color: blue;
+      background-image: url('../img/homemade-icon.png');
+      background-repeat: no-repeat;
+      background-size: 500px 500px;
+    }
+    #homemade-container {
+      background-image: url('../img/homemade-icon.png');
+      background-repeat: no-repeat;
+      background-size: 500px 500px;
     }
   }
   &.resume {

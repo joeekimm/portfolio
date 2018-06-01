@@ -21,7 +21,7 @@ class AboutMe extends Component {
             </div>
           </div>
         </div>
-        <p className='aboutme-text'id="secondary-text">
+        <p className='aboutme-text'id="tertiary-text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lorem
           nisl, tristique blandit ipsum et, malesuada efficitur diam.
           Pellentesque accumsan, ligula ac laoreet blandit, magna magna ornare

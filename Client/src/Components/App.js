@@ -8,7 +8,7 @@ import particlesJSON from '../../Static/assets/particles.json';
 import NavBar from "./NavBar";
 import AboutMe from './AboutMe';
 import Projects from './Projects';
-import MenuButton from './MenuButton';
+import MenuButton from './Assets/MenuButton';
 // import Metronome from './Metronome';
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
   hamburgerClick(event) {
     this.toggleMenu();
 
-    console.log("hamburger clicked");
+    // console.log("hamburger clicked");
     let css =
       this.state.menu === "menu-container" ? "change" : "menu-container";
     this.setState({ menu: css });
@@ -65,10 +65,12 @@ class App extends Component {
         <div className='main home' id='home' id={visibility}>
           {/* <Metronome /> */}
           {/* <Particles params={particlesJSON} style={{position: 'absolute', top: '0', left: '0', backgroundColor: 'black', zIndex: '-1'}} height={'100vh'} width={'100vw'}/> */}
-          <Typist className='typist' avgTypingDelay={100} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
-            <h1 id='primary-text'>Joe (Yubin) Kim</h1>
-            <h2 id='primary-text'>Software Engineer</h2>
-          </Typist>
+          <div className='typist-container'>
+            <Typist className='typist' avgTypingDelay={100} startDelay={700} cursor={{show: false}} onTypingDone={() => console.log('typing done')}>
+              <h1 id='primary-text' className='typist'>Joe (Yubin) Kim</h1>
+              <h2 id='primary-text' className='typist'>Software Engineer</h2>
+            </Typist>
+          </div>
         </div>
         <AboutMe />
         <Projects visibility={visibility}/>
