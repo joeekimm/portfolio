@@ -114,25 +114,6 @@ body {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px); }
 
-.typist-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #3d3d3d;
-  height: 50%;
-  width: 50%;
-  border-radius: 1em 0 0 1em; }
-
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,21 +150,39 @@ body {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    background-color: #8c8c8c;
+    background-color: #3d3d3d;
     height: 100vh;
     width: 100%;
     color: #fff;
     top: 0;
     text-align: center;
     font-size: 200%; }
-    .main.home .typist {
-      font-size: 75px; }
+    .main.home .typist-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: #8c8c8c;
+      height: 50%;
+      width: 50%;
+      border-radius: 1em 0 0 1em; }
+      .main.home .typist-container .typist {
+        font-size: 75px; }
   .main.aboutme {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    background-color: #3d3d3d;
+    background-color: #8c8c8c;
     height: 100vh;
     width: 100%;
     color: #fff;
@@ -224,8 +223,11 @@ body {
     -webkit-box-align: space-between;
         -ms-flex-align: space-between;
             align-items: space-between;
+    background-color: #3d3d3d;
     -ms-flex-item-align: start;
-        align-self: flex-start; }
+        align-self: flex-start;
+    padding: 5vh;
+    border-radius: 0 2em 2em 0; }
   .main #aboutme-assets {
     text-align: center;
     margin-left: 50px; }
@@ -243,9 +245,26 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .main .aboutme-text {
-    padding-left: 100px;
-    padding-right: 100px; }
+  .main .aboutme-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: space-between;
+        -ms-flex-align: space-between;
+            align-items: space-between;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 70%;
+    background-color: #3d3d3d;
+    border-radius: 2em 0 0 2em;
+    padding: 50px; }
   .main #img-links {
     border: 1px solid gray;
     border-radius: 0.5rem;
@@ -257,7 +276,7 @@ body {
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    background-color: #8c8c8c;
+    background-color: #3d3d3d;
     height: 100vh;
     width: 100%;
     color: #fff;

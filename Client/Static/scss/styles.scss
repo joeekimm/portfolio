@@ -138,13 +138,6 @@ body {
 }
 
 //============ HOME PAGE =============//
-.typist-container {
-  @include flex(column, center, center);
-  background-color: #3d3d3d;
-  height: 50%;
-  width: 50%;
-  border-radius: 1em 0 0 1em;
-}
 
 .main {
   @include flex(column, center, center);
@@ -154,17 +147,25 @@ body {
     font-size: 50px;
   }
   &.home {
-    .typist {
-      font-size: 75px;
+    .typist-container {
+      @include flex(column, center, center);
+      background-color: #8c8c8c;
+      height: 50%;
+      width: 50%;
+      border-radius: 1em 0 0 1em;
+
+      .typist {
+        font-size: 75px;
+      }
     }
     @include flex(row, flex-end, center);
-    @include sectionFormat(#8c8c8c);
+    @include sectionFormat(#3d3d3d);
     top: 0;
     text-align: center;
     font-size: 200%;
   }
   &.aboutme {
-    @include sectionFormat(#3d3d3d);
+    @include sectionFormat(#8c8c8c);
     @include flex(column, space-around, center);
     text-align: left;
     color: white;
@@ -181,7 +182,10 @@ body {
   }
   #aboutme-bar {
     @include flex(row, center, space-between);
+    background-color: #3d3d3d;
     align-self: flex-start;
+    padding: 5vh;
+    border-radius: 0 2em 2em 0;
   }
   #aboutme-assets {
     text-align: center;
@@ -190,9 +194,13 @@ body {
   #aboutme-links {
     @include flex(row, center, center);
   }
-  .aboutme-text {
-    padding-left: 100px;
-    padding-right: 100px;
+  .aboutme-text-container {
+    @include flex(row, center, space-between);
+    align-self: flex-end;
+    width: 70%;
+    background-color: #3d3d3d;
+    border-radius: 2em 0 0 2em;
+    padding: 50px;
   }
   #img-links {
     // background-color: white;
@@ -203,7 +211,7 @@ body {
     margin: 15px;
   }
   &.projects {
-    @include sectionFormat(#8c8c8c);
+    @include sectionFormat(#3d3d3d);
     @include flex(column, center, center);
     .projects-group {
       width: 80vw;
