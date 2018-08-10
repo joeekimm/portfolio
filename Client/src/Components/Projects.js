@@ -8,7 +8,7 @@ class Projects extends Component {
   
   render() {
     return (
-      <div className="main projects" id="projects" id={this.props.visibility}>
+      <div className="main projects" id="projects">
         <h1 className="titles" id="primary-text">Projects</h1>
         <Carousel interval={7000}>
           <Carousel.Item>
